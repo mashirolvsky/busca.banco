@@ -1,0 +1,34 @@
+<body>
+  <header>
+    <div class="elipse">
+      <h1 class="titulo">BB</h1>
+    </div>
+  </header>
+  <main>
+    <div class="inputInformacoes">
+      <input
+        type="text"
+        (keyup)="ArrayFiltrado($event)"
+        placeholder="Digite o nome do Banco"
+      />
+    </div>
+    <div class="MainInformacoes">
+      <div *ngFor="let banco of BancosFiltrado" class="CardsInfo">
+        <div class="Cards">
+          <span class="title">Banco:</span>
+          <span>{{ banco.name }}</span>
+          <span class="hr"></span>
+          <span class="title">Code:</span>
+          <span>{{ banco.code }}</span>
+          <span class="hr"></span>
+          <span class="title">Entidade: </span>
+          <span>{{ banco.fullName }}</span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>A vida é Muito boa e sempre vai dar Certo.</p>
+  </footer>
+</body>
